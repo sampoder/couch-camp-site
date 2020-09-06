@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import Header from '../../../components/header'
+import Header from '../../components/header'
 
 const Post = (props) => {
   const router = useRouter()
@@ -9,7 +9,11 @@ const Post = (props) => {
   return (
     <>
       <Header />
-      <h1>Name: {props.events[0].title}</h1>
+      <h1>{props.events[0].title}</h1>
+      <p>Starts at: {props.events[0].start}</p>
+      <p>Ends at: {props.events[0].end}</p>
+      <p>All times in {props.events[0].tz}</p>
+      <p><a href={props.events[0].link}>Sign up</a></p>
     </>
   )
 }
@@ -46,6 +50,10 @@ export async function getStaticProps({ params }) {
       events.map(({ id, fields }) => ({
         id,
         title: fields["Camp Name"],
+        link: fields["Sign Up Link"],
+        start: fields["Start Date (Local Time Please)"].replace("T", " ").replace(".000Z", ""),
+        end: fields["End Date (Local Time Please)"].replace("T", " ").replace(".000Z", ""),
+        tz: fields["Time Zone (eg. GMT+9)"],
       }))
     )
   console.log(events);

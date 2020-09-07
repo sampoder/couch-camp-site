@@ -8,7 +8,6 @@ const Post = (props) => {
 
   return (
     <>
-      <Header />
       <h1>{props.events[0].title}</h1>
       <p>Starts at: {props.events[0].start}</p>
       <p>Ends at: {props.events[0].end}</p>

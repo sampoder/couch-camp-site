@@ -8,8 +8,11 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@geist-ui/react": "^2.0.2",
     "next": "latest",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-lazy-hero": "^2.0.0",
+    "styled-components": "^5.2.0"
   }
 }

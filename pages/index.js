@@ -178,13 +178,11 @@ const Home = (props) => (
             <p style={{ marginBlockStart: "0.4em" }}>
               <strong>Dates:</strong> {event.date}
               <br />
-              <strong>Cost per person:</strong> {event.cost} USD
-              <br />
               <strong>Contact email:</strong> <a href={event.emailURL}>{event.email}</a>
             </p>
             <Card.Footer>
               <Link color href={event.link}>
-                Join the round.
+                Join the round or learn more.
               </Link>
             </Card.Footer>
           </Card>
@@ -224,13 +222,11 @@ const Home = (props) => (
               <p style={{ marginBlockStart: "0.4em" }}>
                 <strong>Dates:</strong> {event.date}
                 <br />
-                <strong>Cost per person:</strong> {event.cost} USD
-                <br />
                 <strong>Contact email:</strong> {event.email}
               </p>
               <Card.Footer>
                 <Link color href={event.link}>
-                  Join the round.
+                  Join the round or learn more.
                 </Link>
               </Card.Footer>
             </Card>
@@ -273,7 +269,6 @@ export async function getServerSideProps() {
         id,
         title: fields["Camp Name"],
         link: fields["Sign Up Link"],
-        cost: fields["Cost (in USD)"],
         date: fields["Formatted Date"],
         image: fields["Header Image"][0]["url"],
         email: fields["Contact Email"],

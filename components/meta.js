@@ -6,8 +6,8 @@ export default ({
   title = "Home",
   description = `A (unofficial) virtual World Scholars Cup season,
   organised by the community.`,
-  image = "https://cloud-8r7qf7pou.vercel.app/collaboration_hub-2.png",
-  url = "https://cloud-mfm9q02p9.vercel.app/screenshot_2020-09-08_at_4.38.34_pm.png",
+  image = "https://cloud-mfm9q02p9.vercel.app/screenshot_2020-09-08_at_4.38.34_pm.png",
+  url = "https://couch-camp-site.vercel.app/",
 }) => (
   <Head>
     <title>{title} - {name}</title>

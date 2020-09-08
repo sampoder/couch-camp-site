@@ -20,6 +20,7 @@ import Meta from "../components/meta.js";
 
 const Home = (props) => (
   <>
+    <Meta />
     <div
       style={{
         overflow: "hidden",

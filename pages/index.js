@@ -16,6 +16,7 @@ import {
   Image,
 } from "@geist-ui/react";
 import LazyHero from "react-lazy-hero";
+import Meta from "../components/meta.js";
 
 const Home = (props) => (
   <>

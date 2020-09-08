@@ -140,9 +140,9 @@ const Home = (props) => (
       This time around there are going to be multiple Couch Camps scattered
       around the world. Just choose the one that is closest to you!
     </p>
-    <Grid.Container gap={2} justify="center">
+    <Grid.Container gap={2} justify="center" style={{ maxWidth:'1200px', margin: 'auto' }}>
       {props.events.map((event) => (
-        <Grid xs={18} md={6}>
+        <Grid xs={18} md={8}>
           <Card>
             <Image
               src={event.image}

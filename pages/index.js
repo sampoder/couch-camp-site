@@ -179,6 +179,8 @@ const Home = (props) => (
               <strong>Dates:</strong> {event.date}
               <br />
               <strong>Cost per person:</strong> {event.cost} USD
+              <br />
+              <strong>Contact email:</strong> <a href={event.emailURL}>{event.email}</a>
             </p>
             <Card.Footer>
               <Link color href={event.link}>
@@ -223,6 +225,8 @@ const Home = (props) => (
                 <strong>Dates:</strong> {event.date}
                 <br />
                 <strong>Cost per person:</strong> {event.cost} USD
+                <br />
+                <strong>Contact email:</strong> {event.email}
               </p>
               <Card.Footer>
                 <Link color href={event.link}>
@@ -272,6 +276,8 @@ export async function getServerSideProps() {
         cost: fields["Cost (in USD)"],
         date: fields["Formatted Date"],
         image: fields["Header Image"][0]["url"],
+        email: fields["Contact Email"],
+        emailURL: 'mailto:'+ fields["Contact Email"]
       }))
     );
   console.log(events);

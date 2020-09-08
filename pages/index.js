@@ -174,7 +174,7 @@ const Home = (props) => (
   </>
 );
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const events = await fetch(
     "http://sampoder-api.herokuapp.com/v0.1/OnePwaa%20Camps/Camps"
   )

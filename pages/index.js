@@ -41,6 +41,7 @@ const Home = (props) => (
           fontSize: "3em",
           marginBlockEnd: "-0.4em",
         }}
+        className="toptitle"
       >
         You're invited to a season of
       </h3>
@@ -50,6 +51,7 @@ const Home = (props) => (
           textShadow: "#DD5B39 8px 8px 0px",
           fontSize: "8em",
         }}
+        className="title"
       >
         Couch Camps{" "}
       </h1>
@@ -72,7 +74,7 @@ const Home = (props) => (
       </h1>
     </div>
     <Grid.Container gap={2} justify="center" style={{ marginBottom: "60px" }}>
-      <Grid xs={9} md={9}>
+      <Grid xs={23} md={9}>
         <img
           width={"650px"}
           height={"257px"}
@@ -86,7 +88,7 @@ const Home = (props) => (
           src="https://i.imgur.com/mQTh5m3.jpg"
         />
       </Grid>
-      <Grid xs={9} md={9}>
+      <Grid xs={23} md={9}>
         <div style={{ margin: "1.5rem auto" }}>
           <h3 style={{ marginBlockEnd: "0em" }}>Practice your skills in</h3>
           <h1>all four WSC events</h1>
@@ -100,7 +102,20 @@ const Home = (props) => (
       </Grid>
     </Grid.Container>
     <Grid.Container gap={2} justify="center" style={{ marginBottom: "30px" }}>
-      <Grid xs={9} md={9}>
+      <Grid xs={23} md={0}>
+        <img
+          width={"650px"}
+          height={"297px"}
+          disableAutoResize={true}
+          style={{
+            height: "297px!important",
+            objectFit: "cover",
+            borderRadius: "10px",
+          }}
+          src="https://www.iccsydney.com.au/getattachment/19d937a8-766c-47a2-a7d6-f10f160eeb62/world-scholars-cup_2018_FBanner_1700x580.jpg.aspx?lang=en-AU&width=1700&height=580&ext=.jpg"
+        />
+      </Grid>
+      <Grid xs={23} md={9}>
         <div style={{ margin: "0.2rem auto" }}>
           <h3 style={{ marginBlockEnd: "0em" }}>It's all going towards</h3>
           <h1>keeping WSC alive</h1>
@@ -113,7 +128,7 @@ const Home = (props) => (
           </h4>
         </div>
       </Grid>
-      <Grid xs={9} md={9}>
+      <Grid xs={23} md={9} className="hideOnMobile">
         <img
           width={"650px"}
           height={"297px"}
@@ -128,7 +143,10 @@ const Home = (props) => (
       </Grid>
     </Grid.Container>
     <Divider />
-    <h1 style={{ textAlign: "center", marginBottom: "20px" }}>
+    <h1
+      style={{ textAlign: "center", marginBottom: "20px" }}
+      className="hideOnMobile"
+    >
       Find your local Couch Camp
     </h1>
     <p
@@ -137,26 +155,30 @@ const Home = (props) => (
         margin: "auto",
         maxWidth: "700px",
         marginBottom: "30px",
+        padding: "0 10px",
       }}
+      className="hideOnMobile"
     >
       This time around there are going to be multiple Couch Camps scattered
       around the world. Just choose the one that is closest to you!
     </p>
-    <Grid.Container gap={2} justify="center" style={{ maxWidth:'1125px', margin: 'auto' }}>
+    <Grid.Container
+      gap={2}
+      justify="center"
+      style={{ maxWidth: "1125px", margin: "auto" }}
+      className="hideOnMobile"
+    >
       {props.events.map((event) => (
         <Grid xs={18} md={8}>
           <Card>
-            <Image
-              src={event.image}
-              height="100%"
-            />
+            <Image src={event.image} height="100%" />
             <h4 style={{ marginBlockEnd: "0em", fontWeight: "700" }}>
               {event.title}
             </h4>
             <p style={{ marginBlockStart: "0.4em" }}>
               <strong>Dates:</strong> {event.date}
               <br />
-              <strong>Cost per person:</strong> {event.cost} USD 
+              <strong>Cost per person:</strong> {event.cost} USD
             </p>
             <Card.Footer>
               <Link color href={event.link}>
@@ -167,10 +189,71 @@ const Home = (props) => (
         </Grid>
       ))}
     </Grid.Container>
+    <div className="hideOnDesktop">
+      <h1
+        style={{ textAlign: "left", marginBottom: "20px", marginLeft: "10px" }}
+      >
+        Find your local Couch Camp
+      </h1>
+      <p
+        style={{
+          textAlign: "left",
+          maxWidth: "700px",
+          marginBottom: "30px",
+          marginLeft: "5px",
+          padding: "0 10px",
+        }}
+      >
+        This time around there are going to be multiple Couch Camps scattered
+        around the world. Just choose the one that is closest to you!
+      </p>
+      <Grid.Container
+        gap={2}
+        justify="left"
+        style={{ maxWidth: "1125px", marginLeft: "5px", textAlign: "left" }}
+      >
+        {props.events.map((event) => (
+          <Grid xs={23} md={8}>
+            <Card>
+              <Image src={event.image} height="100%" />
+              <h4 style={{ marginBlockEnd: "0em", fontWeight: "700" }}>
+                {event.title}
+              </h4>
+              <p style={{ marginBlockStart: "0.4em" }}>
+                <strong>Dates:</strong> {event.date}
+                <br />
+                <strong>Cost per person:</strong> {event.cost} USD
+              </p>
+              <Card.Footer>
+                <Link color href={event.link}>
+                  Join the round.
+                </Link>
+              </Card.Footer>
+            </Card>
+          </Grid>
+        ))}
+      </Grid.Container>
+    </div>
     <Divider y={5}>Couch Camp 2020</Divider>
-    <style jsx>{`
+    <style jsx global>{`
       .caption {
         margin-top: 1rem;
+      }
+      @media screen and (max-width: 900px) {
+        .hideOnMobile {
+          display: none;
+        }
+        .toptitle{
+          font-size: 1.3em!important;
+        }
+        .title{
+          font-size: 5em!important;
+        }
+      }
+      @media screen and (min-width: 900px) {
+        .hideOnDesktop {
+          display: none;
+        }
       }
     `}</style>
   </>
@@ -188,7 +271,7 @@ export async function getServerSideProps() {
         link: fields["Sign Up Link"],
         cost: fields["Cost (in USD)"],
         date: fields["Formatted Date"],
-        image: fields["Header Image"][0]['url'],
+        image: fields["Header Image"][0]["url"],
       }))
     );
   console.log(events);

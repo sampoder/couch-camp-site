@@ -10,7 +10,7 @@ export default ({
   url = "https://cloud-mfm9q02p9.vercel.app/screenshot_2020-09-08_at_4.38.34_pm.png",
 }) => (
   <Head>
-    <title>{title}</title>
+    <title>{title} - {name}</title>
     <meta property="og:title" content={title} />
     <meta name="twitter:title" content={title} />
     <meta name="og:url" content={url} />

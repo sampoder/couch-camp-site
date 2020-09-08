@@ -69,25 +69,26 @@ const Home = (props) => (
         ↓
       </h1>
     </div>
-    <Grid.Container gap={2} justify="center">
+    <Grid.Container gap={2} justify="center" style={{ marginBottom: "60px" }}>
       <Grid xs={9} md={9}>
-        <Display
-          shadow
-          caption="Now for GitHub deploying a pull request automatically."
-        >
-          <Image
-            width="435"
-            height="200"
-            src="https://i.imgur.com/mQTh5m3.jpg"
-            style={{objectFit: 'cover'}}
-          />
-        </Display>
+        <img
+          width={"650px"}
+          height={"257px"}
+          disableAutoResize={true}
+          style={{
+            height: "297px!important",
+            objectFit: "cover",
+            borderRadius: "10px",
+            paddingRight: "10px",
+          }}
+          src="https://i.imgur.com/mQTh5m3.jpg"
+        />
       </Grid>
       <Grid xs={9} md={9}>
-        <div style={{ margin: "2.5rem auto" }}>
-          <h3 style={{ marginBlockEnd: "0em" }}>Practise your skills in</h3>
+        <div style={{ margin: "1.5rem auto" }}>
+          <h3 style={{ marginBlockEnd: "0em" }}>Practice your skills in</h3>
           <h1>all four WSC events</h1>
-          <h4 style={{fontWeight: '400'}}>
+          <h4 style={{ fontWeight: "400" }}>
             From debates on Discord, to a Bowl on Socrative our team has ensured
             your experience will be as similar to a standard round as possible.
             You'll apply the same skills you'll need when competing in the
@@ -96,26 +97,68 @@ const Home = (props) => (
         </div>
       </Grid>
     </Grid.Container>
+    <Grid.Container gap={2} justify="center" style={{ marginBottom: "30px" }}>
+      <Grid xs={9} md={9}>
+        <div style={{ margin: "0.2rem auto" }}>
+          <h3 style={{ marginBlockEnd: "0em" }}>It's all going towards</h3>
+          <h1>keeping WSC alive</h1>
+          <h4 style={{ fontWeight: "400" }}>
+            The Scholars Cup has been struggling due to the COVID-19 crisis.
+            They've started a{" "}
+            <a href="https://www.gofundme.com/f/wsc-covid">GoFundMe</a>{" "}
+            campaign, to ensure the program survives. All the proceeds from
+            Couch Camp 2 will go to the fundraiser.
+          </h4>
+        </div>
+      </Grid>
+      <Grid xs={9} md={9}>
+        <img
+          width={"650px"}
+          height={"297px"}
+          disableAutoResize={true}
+          style={{
+            height: "297px!important",
+            objectFit: "cover",
+            borderRadius: "10px",
+          }}
+          src="https://www.iccsydney.com.au/getattachment/19d937a8-766c-47a2-a7d6-f10f160eeb62/world-scholars-cup_2018_FBanner_1700x580.jpg.aspx?lang=en-AU&width=1700&height=580&ext=.jpg"
+        />
+      </Grid>
+    </Grid.Container>
     <Divider />
-    <h1 style={{textAlign: 'center'}}>
+    <h1 style={{ textAlign: "center", marginBottom: "20px" }}>
       Find your local Couch Camp
     </h1>
+    <p
+      style={{
+        textAlign: "center",
+        margin: "auto",
+        maxWidth: "700px",
+        marginBottom: "30px",
+      }}
+    >
+      This time around there are going to be multiple Couch Camps scattered
+      around the world. Just choose the one that is closest to you!
+    </p>
     <Grid.Container gap={2} justify="center">
       {props.events.map((event) => (
-        <Grid xs={6} md={6}>
+        <Grid xs={18} md={6}>
           <Card>
             <Image
-              src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1549&q=80"
+              src={event.image}
               height="100%"
             />
-            <h4 style={{ marginBlockEnd: "0em" }}>{event.title}</h4>
+            <h4 style={{ marginBlockEnd: "0em", fontWeight: "700" }}>
+              {event.title}
+            </h4>
             <p style={{ marginBlockStart: "0.4em" }}>
-              From {event.start} to {event.end}, we'll be taking a trip to the
-              Lion City (which sadly does not have any lions).
+              <strong>Dates:</strong> {event.date}
+              <br />
+              <strong>Cost per person:</strong> {event.cost} USD 
             </p>
             <Card.Footer>
-              <Link color href={event.slug}>
-                Learn more and sign up.
+              <Link color href={event.link}>
+                Join the round.
               </Link>
             </Card.Footer>
           </Card>
@@ -124,11 +167,10 @@ const Home = (props) => (
     </Grid.Container>
     <Divider y={5}>Couch Camp 2020</Divider>
     <style jsx>{`
-      .caption{
+      .caption {
         margin-top: 1rem;
       }
-    `
-    }</style>
+    `}</style>
   </>
 );
 
@@ -141,35 +183,10 @@ export async function getStaticProps() {
       events.map(({ id, fields }) => ({
         id,
         title: fields["Camp Name"],
-        slug: fields["Slug"],
-        start:
-          fields["Start Date (Local Time Please)"]
-            .split("T")[0]
-            .replace("-", "/")
-            .replace("2020/", "")
-            .replace("-", "/")
-            .split("/")[1] +
-          "/" +
-          fields["Start Date (Local Time Please)"]
-            .split("T")[0]
-            .replace("-", "/")
-            .replace("2020/", "")
-            .replace("-", "/")
-            .split("/")[0],
-        end:
-          fields["End Date (Local Time Please)"]
-            .split("T")[0]
-            .replace("-", "/")
-            .replace("2020/", "")
-            .replace("-", "/")
-            .split("/")[1] +
-          "/" +
-          fields["End Date (Local Time Please)"]
-            .split("T")[0]
-            .replace("-", "/")
-            .replace("2020/", "")
-            .replace("-", "/")
-            .split("/")[0],
+        link: fields["Sign Up Link"],
+        cost: fields["Cost (in USD)"],
+        date: fields["Formatted Date"],
+        image: fields["Header Image"][0]['url'],
       }))
     );
   console.log(events);

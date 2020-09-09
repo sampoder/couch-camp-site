@@ -133,9 +133,12 @@ const Home = (
             <a href={props.events[0].emailURL}>{props.events[0].email}</a>
             {props.events[0].title == "Vietnam" && (
               <p style={{ lineHeight: "1.4" }}>
-                <strong>GoFundMe Note:</strong> <span style={{ lineHeight: "1.4" }}>Some Vietnamese Internet
-                providers may have GoFundMe blocked. We recommend you use a VPN,
-                such as Windscribe, to bypass this restriction.</span>
+                <strong>GoFundMe Note:</strong>{" "}
+                <span style={{ lineHeight: "1.4" }}>
+                  Some Vietnamese Internet providers may have GoFundMe blocked.
+                  We recommend you use a VPN, such as Windscribe, to bypass this
+                  restriction.
+                </span>
               </p>
             )}
           </p>
@@ -160,6 +163,10 @@ const Home = (
             <User
               src="https://www.onepwaa.org/assets/img/onepwaa_13%20(1).png"
               name="OnePwaa"
+            />
+            <User
+              src="https://yt3.ggpht.com/a/AATXAJxd11hjSuUwIGiHbZsKmHS3dm20QbHbSxA338_4iQ=s288-c-k-c0xffffffff-no-rj-mo"
+              name="Joaquin Revello"
             />
           </p>
         </div>

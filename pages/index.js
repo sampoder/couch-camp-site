@@ -61,7 +61,7 @@ const Home = (props) => (
           color: "white",
         }}
       >
-        A (unofficial) virtual World Scholars Cup season,
+        A (unofficial) virtual World Scholar's Cup season,
         <br />
         organised by the community.
       </h3>
@@ -94,10 +94,10 @@ const Home = (props) => (
           <h3 style={{ marginBlockEnd: "0em" }}>Practice your skills in</h3>
           <h1>all four WSC events</h1>
           <h4 style={{ fontWeight: "400" }}>
-            From debates on Discord, to a digital Challenge, our team has ensured
+            From debates on Discord to a digital Challenge, our team has ensured
             your experience will be as similar to a standard round as possible.
             You'll apply the same skills you'll need when competing in the
-            Scholars Cup.
+            Scholar's Cup.
           </h4>
         </div>
       </Grid>
@@ -113,7 +113,7 @@ const Home = (props) => (
             objectFit: "cover",
             borderRadius: "10px",
           }}
-          src="https://www.iccsydney.com.au/getattachment/19d937a8-766c-47a2-a7d6-f10f160eeb62/world-scholars-cup_2018_FBanner_1700x580.jpg.aspx?lang=en-AU&width=1700&height=580&ext=.jpg"
+          src="https://www.iccsydney.com.au/getattachment/19d937a8-766c-47a2-a7d6-f10f160eeb62/world-Scholar's-cup_2018_FBanner_1700x580.jpg.aspx?lang=en-AU&width=1700&height=580&ext=.jpg"
         />
       </Grid>
       <Grid xs={23} md={9}>
@@ -121,10 +121,10 @@ const Home = (props) => (
           <h3 style={{ marginBlockEnd: "0em" }}>It's all going towards</h3>
           <h1>keeping WSC alive</h1>
           <h4 style={{ fontWeight: "400" }}>
-            The Scholars Cup has been struggling due to the COVID-19 crisis.
+            The Scholar's Cup has been struggling due to the COVID-19 crisis.
             They've started a{" "}
             <a href="https://www.gofundme.com/f/wsc-covid">GoFundMe</a>{" "}
-            campaign, to ensure the program survives. All the proceeds from
+            campaign to ensure the program survives. All the proceeds from
             Couch Camp 2 will go to the fundraiser.
           </h4>
         </div>
@@ -139,7 +139,7 @@ const Home = (props) => (
             objectFit: "cover",
             borderRadius: "10px",
           }}
-          src="https://www.iccsydney.com.au/getattachment/19d937a8-766c-47a2-a7d6-f10f160eeb62/world-scholars-cup_2018_FBanner_1700x580.jpg.aspx?lang=en-AU&width=1700&height=580&ext=.jpg"
+          src="https://www.iccsydney.com.au/getattachment/19d937a8-766c-47a2-a7d6-f10f160eeb62/world-Scholar's-cup_2018_FBanner_1700x580.jpg.aspx?lang=en-AU&width=1700&height=580&ext=.jpg"
         />
       </Grid>
     </Grid.Container>
@@ -254,6 +254,10 @@ const Home = (props) => (
         src="https://www.onepwaa.org/assets/img/onepwaa_13%20(1).png"
         name="OnePwaa"
       />
+      <User
+        src="https://yt3.ggpht.com/a/AATXAJxd11hjSuUwIGiHbZsKmHS3dm20QbHbSxA338_4iQ=s288-c-k-c0xffffffff-no-rj-mo"
+        name="Joaquin Revello"
+      />
     </Divider>
     <div style={{textAlign: 'center'}} className="hideOnDesktop">
       <br />
@@ -272,6 +276,10 @@ const Home = (props) => (
       <User
         src="https://www.onepwaa.org/assets/img/onepwaa_13%20(1).png"
         name="OnePwaa"
+      />
+      <User
+        src="https://yt3.ggpht.com/a/AATXAJxd11hjSuUwIGiHbZsKmHS3dm20QbHbSxA338_4iQ=s288-c-k-c0xffffffff-no-rj-mo"
+        name="Joaquin Revello"
       />
     </div>
     <style jsx global>{`

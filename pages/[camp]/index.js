@@ -26,7 +26,7 @@ const Home = (
   {
     name = "Couch Camp 2020 Season",
     title = props.events[0].title,
-    description = `A (unofficial) virtual World Scholars Cup regional round,
+    description = `A (unofficial) virtual World Scholar's Cup regional round,
     organised by the community.`,
     image = "https://cloud-mfm9q02p9.vercel.app/screenshot_2020-09-08_at_4.38.34_pm.png",
     url = "https://couch-camp-site.vercel.app/",
@@ -92,7 +92,7 @@ const Home = (
           color: "white",
         }}
       >
-        A (unofficial) virtual World Scholars Cup regional round,
+        A (unofficial) virtual World Scholar's Cup regional round,
         <br />
         organised by the community.
       </h3>

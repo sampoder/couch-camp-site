@@ -222,7 +222,7 @@ const Home = (props) => (
               <p style={{ marginBlockStart: "0.4em" }}>
                 <strong>Dates:</strong> {event.date}
                 <br />
-                <strong>Contact email:</strong> {event.email}
+                <strong>Contact email:</strong> <a href={event.emailURL}>{event.email}</a>
               </p>
               <Card.Footer>
                 <Link color href={event.slug}>

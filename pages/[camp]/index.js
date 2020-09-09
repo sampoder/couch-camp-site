@@ -9,6 +9,7 @@ import {
   Spacer,
   Display,
   Divider,
+  Button,
   Grid,
   Heading,
   Row,
@@ -104,14 +105,14 @@ const Home = (
         ↓
       </h1>
     </div>
-    <Grid.Container gap={2} justify="center" style={{ marginBottom: "60px" }}>
+    <Grid.Container gap={2} justify="center" style={{ marginBottom: "0px" }}>
       <Grid xs={23} md={6}>
         <div style={{ margin: "1.5rem auto" }}>
           <h3 style={{ marginBlockEnd: "0em" }}>What is a Couch Camp?</h3>
           <p style={{ fontWeight: "400" }}>
             A Couch Camp is a community organised WSC round held virtually. It
-            allows you to build you skills.{" "}
-            All proceeds will go to the WSC directly and their GoFundMe.
+            allows you to build you skills. All proceeds will go to the WSC
+            directly and their GoFundMe.
           </p>
           <a href="/">Learn more</a>
         </div>
@@ -124,7 +125,7 @@ const Home = (
               <strong>Dates:</strong> {props.events[0].dates}{" "}
             </span>
             <br />
-            <strong>Cost (in USD):</strong> ${props.events[0].cost}
+            <strong>Cost per team (in USD):</strong> ${props.events[0].cost}
             <br />
             <strong>Hosted on:</strong> Discord
             <br />
@@ -157,7 +158,12 @@ const Home = (
         </div>
       </Grid>
     </Grid.Container>
-
+    <p style={{textAlign: 'center'}}>
+      <Button size="large" type="secondary">
+        Sign up now.
+      </Button>{" "}
+      <Spacer y={0.5} />
+    </p>
     <Divider y={5}>Couch Camp 2020</Divider>
     <style jsx global>{`
       .caption {

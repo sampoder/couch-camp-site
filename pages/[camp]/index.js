@@ -125,7 +125,19 @@ const Home = (
               <strong>Dates:</strong> {props.events[0].dates}{" "}
             </span>
             <br />
-            <strong>Cost per team (in USD):</strong> ${props.events[0].cost}
+            {props.events[0].earlyBird && (
+              <span>
+                <strong>Early Bird Cost per team (in USD):</strong> ${props.events[0].earlyBird}
+                <br />
+              </span>
+              
+            )}
+            <strong>{props.events[0].earlyBird && (
+              <span>
+                Standard
+              </span>
+              
+            )} Cost per team (in USD):</strong> ${props.events[0].cost}
             <br />
             <strong>Hosted on:</strong> Discord
             <br />
@@ -173,9 +185,10 @@ const Home = (
       </Grid>
     </Grid.Container>
     <p style={{ textAlign: "center" }}>
+      <a href="https://forms.gle/FhYACNeh2UcjBguB6">
       <Button size="large" type="secondary">
         Sign up now.
-      </Button>{" "}
+      </Button>{" "}</a>
       <Spacer y={0.5} />
     </p>
     <Divider y={5}>Couch Camp 2020</Divider>
@@ -256,6 +269,9 @@ export async function getServerSideProps({ params }) {
           .replace("T", " ")
           .replace(".000Z", ""),
         tz: fields["Time Zone (eg. GMT+9)"],
+        earlyBird: fields["Early Bird Pricing"]
+          ? fields["Early Bird Pricing"]
+          : "",
       }))
     );
   console.log(events);

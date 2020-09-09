@@ -94,7 +94,7 @@ const Home = (props) => (
           <h3 style={{ marginBlockEnd: "0em" }}>Practice your skills in</h3>
           <h1>all four WSC events</h1>
           <h4 style={{ fontWeight: "400" }}>
-            From debates on Discord, to a Bowl on Socrative our team has ensured
+            From debates on Discord, to a digital Challenge our team has ensured
             your experience will be as similar to a standard round as possible.
             You'll apply the same skills you'll need when competing in the
             Scholars Cup.

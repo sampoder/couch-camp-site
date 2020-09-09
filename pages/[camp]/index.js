@@ -131,6 +131,13 @@ const Home = (
             <br />
             <strong>Contact:</strong>{" "}
             <a href={props.events[0].emailURL}>{props.events[0].email}</a>
+            {props.events[0].title == "Vietnam" && (
+              <p style={{ lineHeight: "1.4" }}>
+                <strong>GoFundMe Note:</strong> <span style={{ lineHeight: "1.4" }}>Some Vietnamese Internet
+                providers may have GoFundMe blocked. We recommend you use a VPN,
+                such as Windscribe, to bypass this restriction.</span>
+              </p>
+            )}
           </p>
         </div>
       </Grid>
@@ -158,7 +165,7 @@ const Home = (
         </div>
       </Grid>
     </Grid.Container>
-    <p style={{textAlign: 'center'}}>
+    <p style={{ textAlign: "center" }}>
       <Button size="large" type="secondary">
         Sign up now.
       </Button>{" "}

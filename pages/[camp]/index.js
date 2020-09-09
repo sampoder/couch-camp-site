@@ -127,7 +127,7 @@ const Home = (
             <br />
             {props.events[0].earlyBird && (
               <span>
-                <strong>Early Bird Cost per team (in USD):</strong> ${props.events[0].earlyBird}
+                <strong>Early Bird* Cost per team (in USD):</strong> ${props.events[0].earlyBird}
                 <br />
               </span>
               
@@ -152,6 +152,13 @@ const Home = (
                   restriction.
                 </span>
               </p>
+            )}
+            {props.events[0].earlyBird && (
+              <span>
+                <br />
+                *Ends Sept. 18 00:00 GMT +7
+              </span>
+              
             )}
           </p>
         </div>

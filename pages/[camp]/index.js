@@ -201,7 +201,7 @@ const Home = (
   </>
 );
 
-export async function getStaticPaths() {
+export async function getServerSidePaths() {
   const paths = await fetch(
     'http://sampoder-api.herokuapp.com/v0.1/OnePwaa%20Camps/Camps?select={"fields":["Slug"]}'
   )
@@ -220,7 +220,7 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   const id = params.camp;
   console.log(params);
   function filterSlugs(object) {

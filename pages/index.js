@@ -181,7 +181,7 @@ const Home = (props) => (
               <strong>Contact email:</strong> <a href={event.emailURL}>{event.email}</a>
             </p>
             <Card.Footer>
-              <Link color href={event.link}>
+              <Link color href={event.slug}>
                 Join the round or learn more.
               </Link>
             </Card.Footer>
@@ -225,7 +225,7 @@ const Home = (props) => (
                 <strong>Contact email:</strong> {event.email}
               </p>
               <Card.Footer>
-                <Link color href={event.link}>
+                <Link color href={event.slug}>
                   Join the round or learn more.
                 </Link>
               </Card.Footer>
@@ -268,6 +268,7 @@ export async function getServerSideProps() {
       events.map(({ id, fields }) => ({
         id,
         title: fields["Camp Name"],
+        slug: fields["Slug"],
         link: fields["Sign Up Link"],
         date: fields["Formatted Date"],
         image: fields["Header Image"][0]["url"],

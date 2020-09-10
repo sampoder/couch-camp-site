@@ -111,7 +111,7 @@ const Home = (
           <h3 style={{ marginBlockEnd: "0em" }}>What is a Couch Camp?</h3>
           <p style={{ fontWeight: "400" }}>
             A Couch Camp is a community organised WSC round held virtually. It
-            allows you to build you skills. All proceeds will go to the WSC
+            allows you to build your skills. All proceeds will go to the WSC
             directly and their GoFundMe.
           </p>
           <a href="/">Learn more</a>
@@ -183,6 +183,7 @@ const Home = (
               src="https://www.onepwaa.org/assets/img/onepwaa_13%20(1).png"
               name="OnePwaa"
             />
+            <br />
             <User
               src="https://yt3.ggpht.com/a/AATXAJxd11hjSuUwIGiHbZsKmHS3dm20QbHbSxA338_4iQ=s288-c-k-c0xffffffff-no-rj-mo"
               name="Joaquin Revello"

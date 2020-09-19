@@ -156,7 +156,7 @@ const Home = (
             {props.events[0].earlyBird && (
               <span>
                 <br />
-                *Ends Sept. 18 00:00 GMT +7
+                *September 18, 12PM GMT +7
               </span>
               
             )}

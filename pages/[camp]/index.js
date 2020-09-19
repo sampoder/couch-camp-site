@@ -137,7 +137,7 @@ const Home = (
                 Standard
               </span>
               
-            )} Cost per team (in USD):</strong> ${props.events[0].cost}
+            )} Cost per person (in USD):</strong> ${props.events[0].cost}
             <br />
             <strong>Hosted on:</strong> Discord
             <br />

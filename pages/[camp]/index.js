@@ -198,6 +198,10 @@ const Home = (
         Sign up now.
       </Button>{" "}</a>
       <Spacer y={0.5} />
+      <a href="https://discord.gg/8DgHcR2">
+      <Button size="large" type="secondary">
+        Find a team.
+      </Button>{" "}</a>
     </p>
     <Divider y={5}>Couch Camp 2020</Divider>
     <style jsx global>{`

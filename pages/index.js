@@ -148,22 +148,6 @@ const Home = (props) => (
     <Grid.Container gap={2} justify="center" style={{ marginBottom: "0px" }}>
       <Grid xs={23} md={6}>
         <div style={{ margin: "1.5rem auto" }}>
-          <h3 style={{ marginBlockEnd: "0em" }}>Join in!</h3>
-          <p>
-            <a href="https://forms.gle/FhYACNeh2UcjBguB6">
-            <Button size="large" type="secondary">
-              Sign up now.
-            </Button>{" "}</a>
-            <Spacer y={0.5} />
-            <a href="https://discord.gg/8DgHcR2">
-            <Button size="large" type="secondary">
-              Find a team.
-            </Button>{" "}</a>
-          </p>
-        </div>
-      </Grid>
-      <Grid xs={23} md={6}>
-        <div style={{ margin: "1.5rem auto" }}>
           <h3 style={{ marginBlockEnd: "-0.2em" }}>Key Details</h3>
           <p style={{ fontWeight: "400", lineHeight: "2.5" }}>
             <span style={{ marginBottom: "10px" }}>
@@ -176,6 +160,22 @@ const Home = (props) => (
             <br />
             <strong>Contact:</strong>{" "}
             <a href="mailto:all@couch.camp">all@couch.camp</a>
+          </p>
+        </div>
+      </Grid>
+      <Grid xs={23} md={6}>
+        <div style={{ margin: "1.5rem auto", textAlign: 'center' }}>
+          <h3 style={{ marginBlockEnd: "0em" }}>Join in!</h3>
+          <p>
+            <a href="https://forms.gle/FhYACNeh2UcjBguB6">
+            <Button size="large" type="secondary">
+              Sign up now.
+            </Button>{" "}</a>
+            <Spacer y={0.5} />
+            <a href="https://discord.gg/8DgHcR2">
+            <Button size="large" type="secondary">
+              Find a team.
+            </Button>{" "}</a>
           </p>
         </div>
       </Grid>

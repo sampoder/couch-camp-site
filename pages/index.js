@@ -161,44 +161,15 @@ const Home = (props) => (
           <h3 style={{ marginBlockEnd: "-0.2em" }}>Key Details</h3>
           <p style={{ fontWeight: "400", lineHeight: "2.5" }}>
             <span style={{ marginBottom: "10px" }}>
-              <strong>Dates:</strong> {props.events[0].dates}{" "}
+              <strong>Dates:</strong> 15th Oct to 22nd Oct 
             </span>
             <br />
-            {props.events[0].earlyBird && (
-              <span>
-                <strong>Early Bird* Cost per team (in USD):</strong> ${props.events[0].earlyBird}
-                <br />
-              </span>
-              
-            )}
-            <strong>{props.events[0].earlyBird && (
-              <span>
-                Standard
-              </span>
-              
-            )} Cost per person (in USD):</strong> ${props.events[0].cost}
+            <strong>Cost per person (in USD):</strong> $5
             <br />
             <strong>Hosted on:</strong> Discord
             <br />
             <strong>Contact:</strong>{" "}
-            <a href={props.events[0].emailURL}>{props.events[0].email}</a>
-            {props.events[0].title == "Vietnam" && (
-              <p style={{ lineHeight: "1.4" }}>
-                <strong>GoFundMe Note:</strong>{" "}
-                <span style={{ lineHeight: "1.4" }}>
-                  Some Vietnamese Internet providers may have GoFundMe blocked.
-                  We recommend you use a VPN, such as Windscribe, to bypass this
-                  restriction.
-                </span>
-              </p>
-            )}
-            {props.events[0].earlyBird && (
-              <span>
-                <br />
-                *September 18, 12PM GMT +7
-              </span>
-              
-            )}
+            <a href="mailto:all@couch.camp">all@couch.camp</a>
           </p>
         </div>
       </Grid>
@@ -302,26 +273,5 @@ const Home = (props) => (
     `}</style>
   </>
 );
-
-export async function getServerSideProps() {
-  const events = await fetch(
-    "http://sampoder-api.herokuapp.com/v0.1/OnePwaa%20Camps/Camps"
-  )
-    .then((r) => r.json())
-    .then((events) =>
-      events.map(({ id, fields }) => ({
-        id,
-        title: fields["Camp Name"],
-        slug: fields["Slug"],
-        link: fields["Sign Up Link"],
-        date: fields["Formatted Date"],
-        image: fields["Header Image"][0]["url"],
-        email: fields["Contact Email"],
-        emailURL: "mailto:" + fields["Contact Email"],
-      }))
-    );
-  console.log(events);
-  return { props: { events } };
-}
 
 export default Home;

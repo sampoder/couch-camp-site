@@ -147,13 +147,16 @@ const Home = (props) => (
     <Grid.Container gap={2} justify="center" style={{ marginBottom: "0px" }}>
       <Grid xs={23} md={6}>
         <div style={{ margin: "1.5rem auto" }}>
-          <h3 style={{ marginBlockEnd: "0em" }}>What is a Couch Camp?</h3>
-          <p style={{ fontWeight: "400" }}>
-            A Couch Camp is a community organised WSC round held virtually. It
-            allows you to build your skills. All proceeds will go to the WSC
-            directly and their GoFundMe.
-          </p>
-          <a href="/">Learn more</a>
+          <h3 style={{ marginBlockEnd: "0em" }}>Join in!</h3>
+          <a href="https://forms.gle/FhYACNeh2UcjBguB6">
+          <Button size="large" type="secondary">
+            Sign up now.
+          </Button>{" "}</a>
+          <Spacer y={0.5} />
+          <a href="https://discord.gg/8DgHcR2">
+          <Button size="large" type="secondary">
+            Find a team.
+          </Button>{" "}</a>
         </div>
       </Grid>
       <Grid xs={23} md={6}>

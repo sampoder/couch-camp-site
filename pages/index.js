@@ -164,7 +164,7 @@ const Home = (props) => (
         </div>
       </Grid>
       <Grid xs={23} md={6}>
-        <div style={{ margin: "1.5rem auto", textAlign: 'center' }}>
+        <div style={{ margin: "1.5rem auto", textAlign: 'left' }}>
           <h3 style={{ marginBlockEnd: "0em" }}>Join in!</h3>
           <p>
             <a href="https://forms.gle/FhYACNeh2UcjBguB6">

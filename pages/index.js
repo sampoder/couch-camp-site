@@ -1,6 +1,7 @@
 import Head from "next/head";
 import {
   Page,
+  Button,
   Text,
   Card,
   Note,

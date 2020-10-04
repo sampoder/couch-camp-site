@@ -176,7 +176,7 @@ const Home = (props) => (
               Find a team.
             </Button>{" "}</a>
             <Spacer y={0.5} />
-            <a href="https://cloud-5r403iznp.vercel.app/cc2_schedule.pdf">
+            <a href="https://couch.camp/schedule">
             <Button size="large" type="secondary">
               View schedule.
             </Button>{" "}</a>

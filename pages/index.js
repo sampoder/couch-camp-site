@@ -175,6 +175,10 @@ const Home = (props) => (
             <Button size="large" type="secondary">
               Find a team.
             </Button>{" "}</a>
+            <a href="https://cloud-5r403iznp.vercel.app/cc2_schedule.pdf">
+            <Button size="large" type="secondary">
+              View schedule.
+            </Button>{" "}</a>
           </p>
         </div>
       </Grid>

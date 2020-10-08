@@ -1,6 +1,9 @@
 const stripe = require('stripe')(process.env.STRIPE_API_KEY);
 
 export default async (req, res) => {
+  const {
+    query: { amount },
+  } = req
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
     line_items: [

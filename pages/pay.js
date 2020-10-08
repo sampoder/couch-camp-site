@@ -48,7 +48,7 @@ const getValue = value => () => {
 
 export default function Home() {
   return (
-    <div style={{ textAlign: "center", marginTop: "80px", maxWidth: '800px', margin: 'auto' }}>
+    <div style={{ textAlign: "center", maxWidth: '800px', margin: 'auto', marginTop: "80px" }}>
       <h1>Pay for Couch Camp</h1>
       <p>
         Many countries don't have access to GoFundMe, you can use this form as a

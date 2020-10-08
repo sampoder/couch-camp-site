@@ -124,9 +124,9 @@ const Home = (props) => (
           <h4 style={{ fontWeight: "400" }}>
             The Scholar's Cup has been struggling due to the COVID-19 crisis.
             They've started a{" "}
-            <a href="https://www.gofundme.com/f/wsc-covid">GoFundMe</a>{" "}
-            campaign to ensure the program survives. All the proceeds from
-            Couch Camp 2 will go to the fundraiser.
+            <a href="https://www.gofundme.com/f/wsc-covid">GoFundMe</a> campaign
+            to ensure the program survives. All the proceeds from Couch Camp 2
+            will go to the fundraiser.
           </h4>
         </div>
       </Grid>
@@ -151,7 +151,7 @@ const Home = (props) => (
           <h3 style={{ marginBlockEnd: "-0.2em" }}>Key Details</h3>
           <p style={{ fontWeight: "400", lineHeight: "2.5" }}>
             <span style={{ marginBottom: "10px" }}>
-              <strong>Dates:</strong> 15th Oct to 22nd Oct 
+              <strong>Dates:</strong> 15th Oct to 22nd Oct
             </span>
             <br />
             <strong>Cost per person (in USD):</strong> $5
@@ -164,22 +164,30 @@ const Home = (props) => (
         </div>
       </Grid>
       <Grid xs={23} md={6}>
-        <div style={{ margin: "1.5rem auto", textAlign: 'left' }}>
+        <div style={{ margin: "1.5rem auto", textAlign: "left" }}>
           <p>
             <a href="https://forms.gle/FhYACNeh2UcjBguB6">
-            <Button size="large" type="secondary">
-              Sign up now.
-            </Button>{" "}</a>
+              <Button size="large" type="secondary">
+                Sign up now.
+              </Button>{" "}
+            </a>
             <Spacer y={0.5} />
             <a href="https://discord.gg/8DgHcR2">
-            <Button size="large" type="secondary">
-              Find a team.
-            </Button>{" "}</a>
+              <Button size="large" type="secondary">
+                Find a team.
+              </Button>{" "}
+            </a>
             <Spacer y={0.5} />
             <a href="https://couch.camp/schedule">
-            <Button size="large" type="secondary">
-              View schedule.
-            </Button>{" "}</a>
+              <Button size="large" type="secondary">
+                View schedule.
+              </Button>{" "}
+            </a>
+            <a href="https://couch.camp/pay">
+              <Button size="large" type="secondary">
+                Alternative payment portal.
+              </Button>{" "}
+            </a>
           </p>
         </div>
       </Grid>
@@ -232,8 +240,8 @@ const Home = (props) => (
           display: none;
         }
       }
-      .roundimage{
-        height: 220px!important
+      .roundimage {
+        height: 220px !important;
       }
     `}</style>
   </>

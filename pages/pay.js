@@ -15,7 +15,7 @@ import {
 import Meta from "../components/meta";
 import { loadStripe } from "@stripe/stripe-js";
 const stripePromise = loadStripe(
-  "pk_test_51HZxQPCmstuPJabcFQ2tqk8dHSfBp6FI3MhLKyN5URSZltTAEPNaIYRYXW7oFJR730g3WxTx0w45TIlOrl1eK07m00Ydqz5vlf"
+  "pk_live_51HZxQPCmstuPJabcFIdrytuXebp5t6hSVH4R1uzcgZ8lt15fLCRo3eTKeCWKTvEjTEbQKgkrqMjU9m41QY0St5Vk00ByzNGt1d"
 );
 
 const handleClick = async (amount) => {

@@ -11,8 +11,8 @@ export default async (req, res) => {
         name: 'Ticket to MUN @ GEMS',
         description: 'A different kind of MUN conference.',
         images: ['https://cloud-rili0t7tg.vercel.app/82225120_1255964828124592_8113147521939543579_n.jpg'],
-        amount: amount, // Cents
-        currency: 'sgd',
+        amount: amount*100, // Cents
+        currency: 'usd',
         quantity: 1
       }
     ],

@@ -20,7 +20,7 @@ const stripePromise = loadStripe(
 
 
 
-const handleClick = async (event, amount) => {
+const handleClick = async (amount) => {
   // Get Stripe.js instance
   const stripe = await stripePromise;
 

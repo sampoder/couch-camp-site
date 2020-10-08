@@ -24,7 +24,7 @@ const handleClick = async (event) => {
   const stripe = await stripePromise;
 
   // Call your backend to create the Checkout Session
-  const response = await fetch("/api/pay", {
+  const response = await fetch("/api/pay/5", {
     method: "POST",
   });
 

@@ -18,14 +18,12 @@ const stripePromise = loadStripe(
   "pk_test_51HZxQPCmstuPJabcFQ2tqk8dHSfBp6FI3MhLKyN5URSZltTAEPNaIYRYXW7oFJR730g3WxTx0w45TIlOrl1eK07m00Ydqz5vlf"
 );
 
-
-
 const handleClick = async (amount) => {
   // Get Stripe.js instance
   const stripe = await stripePromise;
 
   // Call your backend to create the Checkout Session
-  const response = await fetch("https://couch.camp/api/pay/"+amount, {
+  const response = await fetch("https://couch.camp/api/pay/" + amount, {
     method: "POST",
   });
 
@@ -42,13 +40,21 @@ const handleClick = async (amount) => {
   }
 };
 
-const getValue = value => () => {
+const getValue = (value) => () => {
   handleClick(value);
 };
 
 export default function Home() {
   return (
-    <div style={{ textAlign: "center", maxWidth: '800px', margin: 'auto', marginTop: "80px" }}>
+    <div
+      style={{
+        textAlign: "center",
+        maxWidth: "800px",
+        margin: "auto",
+        marginTop: "80px",
+      }}
+    >
+      <Meta />
       <h1>Pay for Couch Camp</h1>
       <p>
         Many countries don't have access to GoFundMe, you can use this form as a
@@ -63,8 +69,16 @@ export default function Home() {
       >
         Donate the minimum $15
       </Button>
+      <Button
+        type="secondary"
+        style={{ margin: "10px" }}
+        onClick={getValue(10)}
+      >
+        Donate the minimum $10 (for 2 person teams only.)
+      </Button>
       <p>
-        The minimum amount is $15, however the WSC needs as much support as possible. If you can please consider donating more.
+        The minimum amount is $15, however the WSC needs as much support as
+        possible. If you can please consider donating more.
       </p>
       <Button
         type="secondary"
@@ -101,7 +115,9 @@ export default function Home() {
       >
         Donate $100
       </Button>
-      <p>Thank you for your kind support keeping the program we all love alive.</p>
+      <p>
+        Thank you for your kind support keeping the program we all love alive.
+      </p>
     </div>
   );
 }

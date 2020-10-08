@@ -9,7 +9,7 @@ export default async (req, res) => {
     line_items: [
       {
         name: 'Donation to WSC GoFundMe',
-        description: 'Many countries don\'t have access to GoFundMe, you can use this form as a proxy. All donations made here will go to the WSC GoFundMe. This was created for Couch Camp. You will receive an email with a reciept, this can be used as your payment proof. ',
+        description: 'Many countries don\'t have access to GoFundMe, you can use this form as a proxy. All donations made here will go to the WSC GoFundMe. This was created for Couch Camp. You will receive an email with a receipt, this can be used as your payment proof. ',
         images: ['https://cloud-mhzxvfhg5.vercel.app/0119950296_152460869594373_1260401778425122871_n.jpg'],
         amount: amount*100, // Cents
         currency: 'usd',

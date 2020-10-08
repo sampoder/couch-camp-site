@@ -8,9 +8,9 @@ export default async (req, res) => {
     payment_method_types: ['card'],
     line_items: [
       {
-        name: 'Ticket to MUN @ GEMS',
-        description: 'A different kind of MUN conference.',
-        images: ['https://cloud-rili0t7tg.vercel.app/82225120_1255964828124592_8113147521939543579_n.jpg'],
+        name: 'Donation to WSC GoFundMe',
+        description: 'Many countries don\'t have access to GoFundMe, you can use this form as a proxy. All donations made here will go to the WSC GoFundMe. This was created for Couch Camp. You will receive an email with a reciept, this can be used as your payment proof. ',
+        images: ['https://cloud-mhzxvfhg5.vercel.app/0119950296_152460869594373_1260401778425122871_n.jpg'],
         amount: amount*100, // Cents
         currency: 'usd',
         quantity: 1

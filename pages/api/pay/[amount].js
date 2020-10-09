@@ -1,4 +1,4 @@
-const stripe = require('stripe')(process.env.STRIPE_API_KEY);
+const stripe = require('stripe')(process.env.STRIPE_TEST_API_KEY);
 
 export default async (req, res) => {
   const {

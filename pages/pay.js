@@ -23,7 +23,7 @@ const handleClick = async (amount) => {
   const stripe = await stripePromise;
 
   // Call your backend to create the Checkout Session
-  const response = await fetch("https://couch.camp/api/pay/" + amount, {
+  const response = await fetch("https://couch-camp-site-git-test-payment.sampoder.vercel.app/api/pay/" + amount, {
     method: "POST",
   });
 

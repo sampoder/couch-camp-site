@@ -183,12 +183,6 @@ const Home = (props) => (
                 View schedule.
               </Button>{" "}
             </a>
-            <Spacer y={0.5} />
-            <a href="https://couch.camp/pay">
-              <Button size="large" type="secondary">
-                Alternative payment portal.
-              </Button>{" "}
-            </a>
           </p>
         </div>
       </Grid>
